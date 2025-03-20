@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const transition = {
   type: "spring",
@@ -19,12 +20,14 @@ export const MenuItem = ({
   item,
   children,
   onClick,
+  className,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
   onClick?: () => void;
+  className?: string;
 }) => {
   const isActive = active === item;
   
@@ -36,9 +39,11 @@ export const MenuItem = ({
     >
       <motion.p
         transition={{ duration: 0.3 }}
-        className={`cursor-pointer px-4 py-2 ${
-          isActive ? "bg-cyan-600/50 text-black" : "text-black hover:opacity-[0.9]"
-        }`}
+        className={cn(
+          `cursor-pointer px-4 py-2 rounded-2xl`,
+          isActive ? "bg-cyan-600/50 rounded-2xl" : "hover:opacity-[0.9]",
+          className
+        )}
       >
         {item}
       </motion.p>
@@ -70,14 +75,19 @@ export const MenuItem = ({
 export const Menu = ({
   setActive,
   children,
+  className,
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
+  className?: string;
 }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-md border border-transparent text-black shadow-input flex justify-center space-x-4 px-8 py-2"
+      className={cn(
+        "relative rounded-md border border-transparent shadow-input flex justify-center space-x-4 px-8 py-2",
+        className
+      )}
     >
       {children}
     </nav>
@@ -91,12 +101,14 @@ export const MobileMenu = ({
   isOpen,
   onClose,
   children,
+  className,
 }: {
   setActive: (item: string | null) => void;
   active: string | null;
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  className?: string;
 }) => {
   if (!isOpen) return null;
   
@@ -106,38 +118,44 @@ export const MobileMenu = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.2 }}
-      className="absolute top-14 left-0 right-0 bg-white rounded-md shadow-xl border border-black/[0.1] py-2 mx-4"
+      className={cn(
+        "absolute top-14 left-0 right-0 bg-white rounded-md shadow-xl border border-black/[0.1] py-2 mx-4",
+        className
+      )}
     >
       {children}
     </motion.div>
   );
 };
 
-// Mobile menu item component
 export const MobileMenuItem = ({
   item,
   active,
   setActive,
   onClick,
+  className,
 }: {
   item: string;
   active: string | null;
   setActive: (item: string) => void;
   onClick?: () => void;
+  className?: string;
 }) => {
   const isActive = active === item;
   
   return (
     <div
-      className={`px-4 py-3 ${
-        isActive ? "bg-cyan-600/50" : "hover:bg-gray-100"
-      }`}
+      className={cn(
+        `px-4 py-3`,
+        isActive ? "bg-cyan-600/50" : "hover:bg-gray-100",
+        className
+      )}
       onClick={() => {
         setActive(item);
         if (onClick) onClick();
       }}
     >
-      <p className="text-black">{item}</p>
+      <p>{item}</p>
     </div>
   );
 };
@@ -163,39 +181,40 @@ export const ProductItem = ({
         className="flex-shrink-0 shadow-2xl"
       />
       <div>
-        <h4 className="text-2xl font-bold mb-1 text-black">{title}</h4>
-        <p className="text-black text-sm max-w-[10rem]">{description}</p>
+        <h4 className="text-2xl font-bold mb-1">{title}</h4>
+        <p className="text-sm max-w-[10rem]">{description}</p>
       </div>
     </Link>
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, className, ...rest }: any) => {
   return (
-    <Link {...rest} className="text-black hover:text-black">
+    <Link {...rest} className={cn("hover:text-black", className)}>
       {children}
     </Link>
   );
 };
 
-// Hamburger button component
 export const HamburgerButton = ({
   isOpen,
   onClick,
+  className,
 }: {
   isOpen: boolean;
   onClick: () => void;
+  className?: string;
 }) => {
   return (
     <button
       onClick={onClick}
-      className="block md:hidden focus:outline-none"
+      className={cn("block md:hidden focus:outline-none", className)}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
       <div className="w-6 flex flex-col gap-1">
-        <span className={`block h-0.5 w-full bg-black transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-        <span className={`block h-0.5 w-full bg-black transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-        <span className={`block h-0.5 w-full bg-black transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        <span className={`block h-0.5 w-full bg-current transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+        <span className={`block h-0.5 w-full bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+        <span className={`block h-0.5 w-full bg-current transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
       </div>
     </button>
   );
