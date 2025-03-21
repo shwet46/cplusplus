@@ -148,14 +148,14 @@ function Navbar({ className }: { className?: string }) {
             <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Stl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className={cn(
-                  "w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 text-sm",
+                  "w-full px-4 py-2 border font-medium rounded-2xl focus:outline-none focus:ring-2 text-sm",
                   darkMode 
-                    ? "bg-gray-800 border-gray-700 text-white focus:ring-cyan-400" 
-                    : "bg-white border-gray-300 text-gray-900 focus:ring-cyan-500"
+                    ? "bg-gray-800 border-gray-700 text-gray-400 focus:ring-cyan-400" 
+                    : "bg-white border-gray-300 text-gray-700 focus:ring-cyan-500"
                 )}
               />
               <button

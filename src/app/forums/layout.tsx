@@ -2,7 +2,7 @@ import React from 'react'
 
 function layout() {
   return (
-    <div>layout</div>
+    <div>under progress</div>
   )
 }
 
