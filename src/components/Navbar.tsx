@@ -10,7 +10,6 @@ import {
 } from "./ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 
 function Navbar({ className }: { className?: string }) {
