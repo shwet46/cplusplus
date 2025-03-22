@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f7f7f7;
   --foreground: #171717;
   --font-sans: "Fira Code", Helvetica, sans-serif;
   --font-mono: "Fira Code", monospace;
@@ -40,8 +40,6 @@ button {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-
 
 .dark-mode-toggle {
   color: var(--foreground);

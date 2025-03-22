@@ -30,13 +30,9 @@ export const MenuItem = ({
   className?: string;
 }) => {
   const isActive = active === item;
-  
+
   return (
-    <div 
-      onMouseEnter={() => setActive(item)} 
-      className="relative"
-      onClick={onClick}
-    >
+    <div onMouseEnter={() => setActive(item)} className="relative" onClick={onClick}>
       <motion.p
         transition={{ duration: 0.3 }}
         className={cn(
@@ -47,25 +43,23 @@ export const MenuItem = ({
       >
         {item}
       </motion.p>
-      {active !== null && (
+      {active !== null && isActive && children && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={transition}
         >
-          {isActive && children && (
-            <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
-              <motion.div
-                transition={transition}
-                layoutId="active"
-                className="bg-white backdrop-blur-sm rounded-md overflow-hidden border border-black/[0.2] shadow-xl"
-              >
-                <motion.div layout className="w-max h-full p-4">
-                  {children}
-                </motion.div>
+          <div className="absolute top-[calc(100%_+_1.7rem)] left-1/2 transform -translate-x-1/2">
+            <motion.div
+              transition={transition}
+              layoutId="active"
+              className="bg-white backdrop-blur-sm rounded-md overflow-hidden border border-black/[0.2] shadow-xl"
+            >
+              <motion.div layout className="w-max h-full p-4">
+                {children}
               </motion.div>
-            </div>
-          )}
+            </motion.div>
+          </div>
         </motion.div>
       )}
     </div>
@@ -94,39 +88,49 @@ export const Menu = ({
   );
 };
 
-// New component for mobile menu
-export const MobileMenu = ({
-  setActive,
-  active,
-  isOpen,
-  onClose,
-  children,
-  className,
-}: {
-  setActive: (item: string | null) => void;
-  active: string | null;
+interface MobileMenuProps {
   isOpen: boolean;
-  onClose: () => void;
   children: React.ReactNode;
   className?: string;
-}) => {
-  if (!isOpen) return null;
-  
+  onClose: () => void;
+  setActive: React.Dispatch<React.SetStateAction<string | null>>;
+  active: string | null;
+}
+
+export function MobileMenu({ isOpen, children, className, onClose, setActive, active }: MobileMenuProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.2 }}
-      className={cn(
-        "absolute top-14 left-0 right-0 bg-white rounded-md shadow-xl border border-black/[0.1] py-2 mx-4",
-        className
-      )}
-    >
+    <div className={`mobile-menu ${isOpen ? 'open' : ''} ${className}`}>
+      <button onClick={onClose}>Close</button>
       {children}
-    </motion.div>
+    </div>
   );
-};
+}
+
+interface MenuProps {
+  setActive: React.Dispatch<React.SetStateAction<string | null>>;
+  className?: string;
+  children: React.ReactNode;
+}
+
+// Removed duplicate Menu component definition
+
+
+interface HamburgerButtonProps {
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+// Removed duplicate HamburgerButton component definition
+
+interface MobileMenuItemProps {
+  item: string;
+  active: string | null;
+  setActive: React.Dispatch<React.SetStateAction<string | null>>;
+  onClick: () => void;
+  className?: string;
+}
+
+// Removed duplicate MobileMenuItem component definition
 
 export const MobileMenuItem = ({
   item,
@@ -142,7 +146,7 @@ export const MobileMenuItem = ({
   className?: string;
 }) => {
   const isActive = active === item;
-  
+
   return (
     <div
       className={cn(
@@ -173,13 +177,7 @@ export const ProductItem = ({
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
-      <Image
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 shadow-2xl"
-      />
+      <Image src={src} width={140} height={70} alt={title} className="flex-shrink-0 shadow-2xl" />
       <div>
         <h4 className="text-2xl font-bold mb-1">{title}</h4>
         <p className="text-sm max-w-[10rem]">{description}</p>
@@ -188,7 +186,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, className, ...rest }: any) => {
+export const HoveredLink = ({ children, className, ...rest }: React.ComponentProps<typeof Link>) => {
   return (
     <Link {...rest} className={cn("hover:text-black", className)}>
       {children}

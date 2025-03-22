@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import {
-  HoveredLink,
   Menu,
   MenuItem,
   HamburgerButton,
@@ -18,6 +17,7 @@ function Navbar({ className }: { className?: string }) {
   const [isMobile, setIsMobile] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [darkMode, setDarkMode] = useState(false);
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768); 
