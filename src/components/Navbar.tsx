@@ -10,7 +10,6 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>("Home");
