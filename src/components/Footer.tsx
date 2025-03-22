@@ -10,7 +10,6 @@ const Footer = () => {
     <footer className="bg-gray-100 text-gray-700 pt-10 pb-8 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Documentation Section */}
           <div>
             <h3 className="text-gray-900 text-xl font-semibold mb-4">Documentation</h3>
             <ul className="space-y-2">
@@ -21,7 +20,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Community Section */}
           <div>
             <h3 className="text-gray-900 text-xl font-semibold mb-4">Community</h3>
             <ul className="space-y-2">
@@ -32,7 +30,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Resources Section */}
           <div>
             <h3 className="text-gray-900 text-xl font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -43,7 +40,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* About Section */}
           <div>
             <h3 className="text-gray-900 text-xl font-semibold mb-4">About</h3>
             <ul className="space-y-2">
@@ -54,8 +50,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
-        {/* Social Links */}
+
         <div className="mt-10 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-6 mb-4 md:mb-0">
             <Link href="https://github.com/cplusplus" aria-label="GitHub" className="text-gray-500 hover:text-gray-900 transition-colors">
@@ -75,7 +70,6 @@ const Footer = () => {
             </Link>
           </div>
           
-          {/* Copyright */}
           <div className="text-gray-500 text-sm">
             <p>© {year} cplusplus.com. All rights reserved.</p>
           </div>

@@ -8,7 +8,7 @@ export default function Home() {
     <>
      <main className="min-h-screen antialiased">
       <Hero/>
-      <Homecards darkMode={false}/>
+      <Homecards/>
       <Forumactivity/>
       <Footer/>
     </main>

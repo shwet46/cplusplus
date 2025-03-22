@@ -106,11 +106,6 @@ export function MobileMenu({ isOpen, children, className, onClose }: MobileMenuP
   );
 }
 
-
-
-
-// Removed duplicate MobileMenuItem component definition
-
 export const MobileMenuItem = ({
   item,
   active,
