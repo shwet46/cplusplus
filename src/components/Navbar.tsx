@@ -76,7 +76,6 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center mr-4">
           <div className="flex items-center">
             <div className="h-9 w-9 rounded-full mr-2 flex items-center justify-center text-white text-sm">
-              <Image src="images/cpp.png" alt="c++" />
             </div>
             <span className={cn("text-lg hidden sm:inline", darkMode ? "text-blue-300" : "text-indigo-800")}>
               Cplusplus.com
