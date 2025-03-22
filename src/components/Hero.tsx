@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function Hero() {
   return (
@@ -6,16 +7,18 @@ function Hero() {
       
       {/* Left Section: Image and Title */}
       <div className="flex flex-col items-center md:items-start gap-4">
-        <img
-          src="images/cpphero.png"
+        <Image
+          src="/images/cpphero.png"
           alt="C++ Hero"
+          width={350} // Adjust the width as needed
+          height={256} // Adjust the height as needed
           className="h-40 md:h-52 lg:h-64"
         />
       </div>
       
       {/* Right Section: Description */}
       <div className="max-w-xl text-center md:text-left">
-      <h1 className="text-5xl md:text-5xl font-extrabold text-primary mb-6 text-indigo-600">C-plus-plus</h1>
+        <h1 className="text-5xl md:text-5xl font-extrabold text-primary mb-6 text-indigo-600">C-plus-plus</h1>
         <p className="text-lg md:text-xl font-normal text-secondary">
           Welcome to the ultimate C++ learning platform! Dive into the world of C++ with comprehensive tutorials, coding challenges, and hands-on projects. 
           Whether you're a beginner or an advanced programmer, our resources are tailored to enhance your coding skills. 

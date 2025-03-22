@@ -75,7 +75,7 @@ const forumData = [
 
 const ForumActivity = () => {
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
+    <div className="p-4  min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Latest <span className="text-blue-500">Forum</span> Activity:</h1>
       <div className="space-y-4">
         {forumData.map((post, index) => (

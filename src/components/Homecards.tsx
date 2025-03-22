@@ -20,7 +20,7 @@ const HomeCards: React.FC<HomeCardsProps> = ({ darkMode }) => {
         {["Tutorials", "Reference", "Articles"].map((title, index) => (
           <div
             key={index}
-            className={`w-full md:w-2/3 lg:w-1/2 text-left p-4 border shadow-md ${cardStyle} sticky top-0 transform transition duration-300 hover:scale-105 hover:animate-[wiggle_0.3s_ease-in-out]`}
+            className={`w-full md:w-2/3 lg:w-1/2 text-left rounded-md p-4 border shadow-md ${cardStyle} sticky top-0 transform transition duration-300 hover:scale-105 hover:animate-[wiggle_0.3s_ease-in-out]`}
           >
             <h1 className="text-xl sm:text-2xl font-bold text-blue-500">{title}</h1>
             <p className={`text-sm sm:text-lg mt-4 p-2 rounded ${codeBlockStyle}`}>
@@ -30,7 +30,7 @@ const HomeCards: React.FC<HomeCardsProps> = ({ darkMode }) => {
                 ? "Description of the most important classes, functions, and objects of the Standard Language Library, with descriptive fully-functional short programs as examples."
                 : "User-contributed articles, organized into different categories. You can contribute your own articles!"}
             </p>
-            <button className="mt-4 px-6 py-2 text-xl font-bold bg-blue-500 text-white border-2 border-black shadow-md transform hover:scale-105 hover:rotate-1 transition duration-300">
+            <button className="mt-4 px-6 py-2 text-xl font-bold bg-blue-500 text-white border-2 border-black shadow-md">
               Browse
             </button>
           </div>

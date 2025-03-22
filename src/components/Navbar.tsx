@@ -14,7 +14,7 @@ import { AnimatePresence } from "framer-motion";
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>("Home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [, setIsMobile] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 

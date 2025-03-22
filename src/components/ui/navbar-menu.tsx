@@ -106,29 +106,8 @@ export function MobileMenu({ isOpen, children, className, onClose, setActive, ac
   );
 }
 
-interface MenuProps {
-  setActive: React.Dispatch<React.SetStateAction<string | null>>;
-  className?: string;
-  children: React.ReactNode;
-}
-
-// Removed duplicate Menu component definition
 
 
-interface HamburgerButtonProps {
-  isOpen: boolean;
-  onClick: () => void;
-}
-
-// Removed duplicate HamburgerButton component definition
-
-interface MobileMenuItemProps {
-  item: string;
-  active: string | null;
-  setActive: React.Dispatch<React.SetStateAction<string | null>>;
-  onClick: () => void;
-  className?: string;
-}
 
 // Removed duplicate MobileMenuItem component definition
 
