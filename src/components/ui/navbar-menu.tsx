@@ -97,7 +97,7 @@ interface MobileMenuProps {
   active: string | null;
 }
 
-export function MobileMenu({ isOpen, children, className, onClose, setActive, active }: MobileMenuProps) {
+export function MobileMenu({ isOpen, children, className, onClose }: MobileMenuProps) {
   return (
     <div className={`mobile-menu ${isOpen ? 'open' : ''} ${className}`}>
       <button onClick={onClose}>Close</button>

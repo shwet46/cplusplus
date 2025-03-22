@@ -10,6 +10,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>("Home");
@@ -75,7 +76,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center mr-4">
           <div className="flex items-center">
             <div className="h-9 w-9 rounded-full mr-2 flex items-center justify-center text-white text-sm">
-              <img src="images/cpp.png" alt="c++" />
+              <Image src="images/cpp.png" alt="c++" />
             </div>
             <span className={cn("text-lg hidden sm:inline", darkMode ? "text-blue-300" : "text-indigo-800")}>
               Cplusplus.com
