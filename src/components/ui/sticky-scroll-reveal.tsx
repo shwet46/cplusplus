@@ -45,9 +45,9 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
   });
 
   const backgroundColors = [
-    "#1f2937", // slate-900
-    "#000000", // black
-    "#111827", // neutral-900
+    "transparent", // slate-900
+    "transparent", // black
+    "transparent", // neutral-900
   ];
 
   const linearGradients = useMemo(
