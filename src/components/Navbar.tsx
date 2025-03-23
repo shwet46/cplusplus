@@ -16,7 +16,6 @@ function Navbar({ className }: { className?: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [, setIsMobile] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -27,28 +26,10 @@ function Navbar({ className }: { className?: string }) {
     
     window.addEventListener("resize", checkMobile);
     
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      setDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
+    document.documentElement.classList.add("dark");
     
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -66,8 +47,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-0 inset-x-0 font-bold z-50 shadow-sm transition-colors duration-200",
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900",
+        "fixed top-0 inset-x-0 font-bold z-50 shadow-sm transition-colors duration-200 bg-gray-900 text-white",
         className
       )}
     >
@@ -76,39 +56,15 @@ function Navbar({ className }: { className?: string }) {
           <div className="flex items-center">
             <div className="h-9 w-9 rounded-full mr-2 flex items-center justify-center text-white text-sm">
             </div>
-            <span className={cn("text-lg hidden sm:inline", darkMode ? "text-blue-300" : "text-indigo-800")}>
+            <span className="text-lg hidden sm:inline text-blue-300">
               Cplusplus.com
             </span>
           </div>
         </div>
         <div className="md:hidden ml-auto flex items-center">
-          <button 
-            onClick={toggleTheme} 
-            className={cn("p-2 mr-2", darkMode ? "text-yellow-300" : "text-gray-600")}
-            aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {darkMode ? (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            )}
-          </button>
-          
           <Link 
             href="/login" 
-            className={cn("p-2 mr-4", darkMode ? "text-pink-300" : "text-pink-600")}
+            className="p-2 mr-4 text-pink-300"
             aria-label="User Account"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -149,12 +105,7 @@ function Navbar({ className }: { className?: string }) {
                 placeholder="Stl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className={cn(
-                  "w-full px-4 py-2 border font-medium rounded-2xl focus:outline-none focus:ring-2 text-sm",
-                  darkMode 
-                    ? "bg-gray-800 border-gray-700 text-gray-400 focus:ring-cyan-400" 
-                    : "bg-white border-gray-300 text-gray-700 focus:ring-cyan-500"
-                )}
+                className="w-full px-4 py-2 border font-medium rounded-2xl focus:outline-none focus:ring-2 text-sm bg-gray-800 border-gray-700 text-gray-400 focus:ring-cyan-400"
               />
               <button
                 type="submit"
@@ -169,12 +120,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
           <Link 
             href="/login" 
-            className={cn(
-              "flex-shrink-0 px-4 py-2 rounded-2xl transition-colors duration-200",
-              darkMode 
-                ? "bg-blue-500 hover:bg-blue-600 text-white" 
-                : "bg-blue-500 hover:bg-blue-600 text-white"
-            )}
+            className="flex-shrink-0 px-4 py-2 rounded-2xl transition-colors duration-200 bg-blue-500 hover:bg-blue-600 text-white"
           >
             Login
           </Link>
@@ -187,21 +133,16 @@ function Navbar({ className }: { className?: string }) {
             onClose={closeMobileMenu}
             setActive={setActive}
             active={active}
-            className={darkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}
+            className="bg-gray-800 border-gray-700"
           >
-            <div className={cn("px-4 py-3 border-b", darkMode ? "border-gray-700" : "border-gray-200")}>
+            <div className="px-4 py-3 border-b border-gray-700">
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
                   placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className={cn(
-                    "w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 text-sm",
-                    darkMode 
-                      ? "bg-gray-800 border-gray-700 text-white focus:ring-cyan-400" 
-                      : "bg-white border-gray-300 text-gray-900 focus:ring-cyan-500"
-                  )}
+                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 text-sm bg-gray-800 border-gray-700 text-white focus:ring-cyan-400"
                 />
                 <button
                   type="submit"
@@ -220,7 +161,7 @@ function Navbar({ className }: { className?: string }) {
                 active={active}
                 setActive={setActive}
                 onClick={closeMobileMenu}
-                className={darkMode ? "text-white hover:bg-gray-700" : ""}
+                className="text-white hover:bg-gray-700"
               />
             </Link>
             <Link href={"/tutorials"}>
@@ -229,7 +170,7 @@ function Navbar({ className }: { className?: string }) {
                 active={active}
                 setActive={setActive}
                 onClick={closeMobileMenu}
-                className={darkMode ? "text-white hover:bg-gray-700" : ""}
+                className="text-white hover:bg-gray-700"
               />
             </Link>
             <Link href={"/articles"}>
@@ -238,7 +179,7 @@ function Navbar({ className }: { className?: string }) {
                 active={active}
                 setActive={setActive}
                 onClick={closeMobileMenu}
-                className={darkMode ? "text-white hover:bg-gray-700" : ""}
+                className="text-white hover:bg-gray-700"
               />
             </Link>
             <Link href={"/forums"}>
@@ -247,7 +188,7 @@ function Navbar({ className }: { className?: string }) {
                 active={active}
                 setActive={setActive}
                 onClick={closeMobileMenu}
-                className={darkMode ? "text-white hover:bg-gray-700" : ""}
+                className="text-white hover:bg-gray-700"
               />
             </Link>
             <Link href={"/reference"}>
@@ -256,7 +197,7 @@ function Navbar({ className }: { className?: string }) {
                 active={active}
                 setActive={setActive}
                 onClick={closeMobileMenu}
-                className={darkMode ? "text-white hover:bg-gray-700" : ""}
+                className="text-white hover:bg-gray-700"
               />
             </Link>
           </MobileMenu>

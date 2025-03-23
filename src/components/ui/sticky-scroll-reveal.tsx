@@ -45,9 +45,9 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
   });
 
   const backgroundColors = [
-    "#f7f7f7", // slate-900
-    "#f7f7f7", // black
-    "#f7f7f7", // neutral-900
+    "#1f2937", // slate-900
+    "#000000", // black
+    "#111827", // neutral-900
   ];
 
   const linearGradients = useMemo(
@@ -86,7 +86,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-cyan-900"
+                className="text-2xl font-bold text-cyan-400"
               >
                 {item.title}
               </motion.h2>
@@ -97,7 +97,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-gray-900"
+                className="text-kg mt-10 max-w-sm text-gray-400"
               >
                 {item.description}
               </motion.p>
@@ -109,7 +109,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-white lg:block",
+          "sticky top-10 hidden h-60 w-80 overflow-hidden rounded-md bg-gray-800 lg:block",
           contentClassName
         )}
       >

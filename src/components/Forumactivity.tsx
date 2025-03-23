@@ -75,21 +75,21 @@ const forumData = [
 
 const ForumActivity = () => {
   return (
-    <div className="p-4  min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Latest <span className="text-blue-500">Forum</span> Activity:</h1>
+    <div className="p-4 min-h-screen text-white">
+      <h1 className="text-2xl font-bold mb-4">Latest <span className="text-blue-400">Forum</span> Activity:</h1>
       <div className="space-y-4">
         {forumData.map((post, index) => (
           <div
             key={index}
-            className="p-4 bg-gray-200 rounded-lg shadow-md border border-gray-300 font-mono"
+            className="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700 font-mono"
           >
-            <a href="#" className="text-blue-600 font-semibold hover:underline">
+            <a href="#" className="text-blue-400 font-semibold hover:underline">
               {post.title}
             </a>{' '}
             <span className="text-gray-500">[{post.category}]</span>
-            <p className="text-sm text-gray-700 mt-1">by <span className="text-blue-500">{post.author}</span></p>
+            <p className="text-sm text-gray-400 mt-1">by <span className="text-blue-400">{post.author}</span></p>
             <p className="text-xs text-gray-500 mt-1">{post.date}</p>
-            <p className="text-xs text-gray-600 mt-1">[{post.replies} replies]</p>
+            <p className="text-xs text-gray-500 mt-1">[{post.replies} replies]</p>
           </div>
         ))}
       </div>
