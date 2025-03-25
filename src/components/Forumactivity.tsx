@@ -81,7 +81,7 @@ const ForumActivity = () => {
         {forumData.map((post, index) => (
           <div
             key={index}
-            className="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700 font-mono"
+            className="p-4 bg-gray-950 rounded-lg shadow-md border border-gray-700 font-mono"
           >
             <a href="#" className="text-blue-400 font-semibold hover:underline">
               {post.title}
