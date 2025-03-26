@@ -47,7 +47,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-0 inset-x-0 font-bold z-50 shadow-sm transition-colors duration-200 bg-gray-900 text-white",
+        "fixed top-0 inset-x-0 font-bold z-50 shadow-sm transition-colors duration-200 bg-zinc-900 text-white",
         className
       )}
     >
@@ -105,7 +105,7 @@ function Navbar({ className }: { className?: string }) {
                 placeholder="Stl"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 border font-medium rounded-2xl focus:outline-none focus:ring-2 text-sm bg-gray-800 border-gray-700 text-gray-400 focus:ring-cyan-400"
+                className="w-full px-4 py-2 border font-medium rounded-2xl focus:outline-none focus:ring-2 text-sm bg-zinc-800 border-zinc-700 text-gray-400 focus:ring-cyan-400"
               />
               <button
                 type="submit"
