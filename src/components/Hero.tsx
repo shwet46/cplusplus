@@ -12,7 +12,8 @@ function Hero() {
       <div className="max-w-xl">
         <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 text-indigo-600">C-plus-plus</h1>
         <p className="text-base md:text-lg font-normal text-secondary">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi accusamus facilis voluptas repudiandae excepturi voluptatibus beatae repellendus saepe. Quam quisquam non culpa omnis molestiae, iusto placeat! Beatae quaerat quam harum.
+        Learn C++ from the ground up—covering fundamentals, advanced concepts, and best practices for efficient coding.  
+        Master data structures, algorithms, and real-world applications with hands-on examples.
         </p>
       </div>
 

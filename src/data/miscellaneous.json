@@ -1,0 +1,129 @@
+{
+    "headers": [
+        {
+            "name": "<algorithm>",
+            "originalName": "algorithm",
+            "description": "Standard Template Library: Algorithms library"
+        },
+        {
+            "name": "<chrono>",
+            "originalName": "chrono",
+            "description": "Time library"
+        },
+        {
+            "name": "<codecvt>",
+            "originalName": "codecvt",
+            "description": "Unicode conversion facets"
+        },
+        {
+            "name": "<complex>",
+            "originalName": "complex",
+            "description": "Complex numbers library"
+        },
+        {
+            "name": "<exception>",
+            "originalName": "exception",
+            "description": "Standard exceptions"
+        },
+        {
+            "name": "<functional>",
+            "originalName": "functional",
+            "description": "Function objects"
+        },
+        {
+            "name": "<initializer_list>",
+            "originalName": "initializer_list",
+            "description": "Initializer list"
+        },
+        {
+            "name": "<iterator>",
+            "originalName": "iterator",
+            "description": "Iterator definitions"
+        },
+        {
+            "name": "<limits>",
+            "originalName": "limits",
+            "description": "Numeric limits"
+        },
+        {
+            "name": "<locale>",
+            "originalName": "locale",
+            "description": "Localization library"
+        },
+        {
+            "name": "<memory>",
+            "originalName": "memory",
+            "description": "Memory elements"
+        },
+        {
+            "name": "<new>",
+            "originalName": "new",
+            "description": "Dynamic memory"
+        },
+        {
+            "name": "<numeric>",
+            "originalName": "numeric",
+            "description": "Generalized numeric operations"
+        },
+        {
+            "name": "<random>",
+            "originalName": "random",
+            "description": "Random number generation"
+        },
+        {
+            "name": "<ratio>",
+            "originalName": "ratio",
+            "description": "Ratio header"
+        },
+        {
+            "name": "<regex>",
+            "originalName": "regex",
+            "description": "Regular Expressions"
+        },
+        {
+            "name": "<stdexcept>",
+            "originalName": "stdexcept",
+            "description": "Exception classes"
+        },
+        {
+            "name": "<string>",
+            "originalName": "string",
+            "description": "Strings library"
+        },
+        {
+            "name": "<system_error>",
+            "originalName": "system_error",
+            "description": "System errors"
+        },
+        {
+            "name": "<tuple>",
+            "originalName": "tuple",
+            "description": "Tuple library"
+        },
+        {
+            "name": "<typeindex>",
+            "originalName": "typeindex",
+            "description": "Type index"
+        },
+        {
+            "name": "<typeinfo>",
+            "originalName": "typeinfo",
+            "description": "Type information"
+        },
+        {
+            "name": "<type_traits>",
+            "originalName": "type_traits",
+            "description": "Type traits library"
+        },
+        {
+            "name": "<utility>",
+            "originalName": "utility",
+            "description": "Utility components"
+        },
+        {
+            "name": "<valarray>",
+            "originalName": "valarray",
+            "description": "Library for arrays of numeric values"
+        }
+    ]
+}

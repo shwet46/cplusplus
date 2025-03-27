@@ -1,0 +1,149 @@
+{
+    "description": "The elements of the C language library are also included as a subset of the C++ Standard library. These cover many aspects, from general utility functions and macros to input/output functions and dynamic memory management functions.",
+    "headers": [
+      {
+        "name": "<cassert>",
+        "originalName": "<assert.h>",
+        "description": "C Diagnostics Library (header)",
+        "category": "Diagnostics"
+      },
+      {
+        "name": "<cctype>",
+        "originalName": "<ctype.h>",
+        "description": "Character handling functions (header)",
+        "category": "String Processing"
+      },
+      {
+        "name": "<cerrno>",
+        "originalName": "<errno.h>",
+        "description": "C Errors (header)",
+        "category": "Error Handling"
+      },
+      {
+        "name": "<cfenv>",
+        "originalName": "<fenv.h>",
+        "description": "Floating-point environment (header)",
+        "category": "Numeric"
+      },
+      {
+        "name": "<cfloat>",
+        "originalName": "<float.h>",
+        "description": "Characteristics of floating-point types (header)",
+        "category": "Numeric"
+      },
+      {
+        "name": "<cinttypes>",
+        "originalName": "<inttypes.h>",
+        "description": "C integer types (header)",
+        "category": "Type Definitions"
+      },
+      {
+        "name": "<ciso646>",
+        "originalName": "<iso646.h>",
+        "description": "ISO 646 Alternative operator spellings (header)",
+        "category": "Language"
+      },
+      {
+        "name": "<climits>",
+        "originalName": "<limits.h>",
+        "description": "Sizes of integral types (header)",
+        "category": "Type Definitions"
+      },
+      {
+        "name": "<clocale>",
+        "originalName": "<locale.h>",
+        "description": "C localization library (header)",
+        "category": "Internationalization"
+      },
+      {
+        "name": "<cmath>",
+        "originalName": "<math.h>",
+        "description": "C numerics library (header)",
+        "category": "Numeric"
+      },
+      {
+        "name": "<csetjmp>",
+        "originalName": "<setjmp.h>",
+        "description": "Non local jumps (header)",
+        "category": "Program Control"
+      },
+      {
+        "name": "<csignal>",
+        "originalName": "<signal.h>",
+        "description": "C library to handle signals (header)",
+        "category": "System Interaction"
+      },
+      {
+        "name": "<cstdarg>",
+        "originalName": "<stdarg.h>",
+        "description": "Variable arguments handling (header)",
+        "category": "Function Arguments"
+      },
+      {
+        "name": "<cstdbool>",
+        "originalName": "<stdbool.h>",
+        "description": "Boolean type (header)",
+        "category": "Type Definitions"
+      },
+      {
+        "name": "<cstddef>",
+        "originalName": "<stddef.h>",
+        "description": "C Standard definitions (header)",
+        "category": "Type Definitions"
+      },
+      {
+        "name": "<cstdint>",
+        "originalName": "<stdint.h>",
+        "description": "Integer types (header)",
+        "category": "Type Definitions"
+      },
+      {
+        "name": "<cstdio>",
+        "originalName": "<stdio.h>",
+        "description": "C library to perform Input/Output operations (header)",
+        "category": "Input/Output"
+      },
+      {
+        "name": "<cstdlib>",
+        "originalName": "<stdlib.h>",
+        "description": "C Standard General Utilities Library (header)",
+        "category": "Utility"
+      },
+      {
+        "name": "<cstring>",
+        "originalName": "<string.h>",
+        "description": "C Strings (header)",
+        "category": "String Processing"
+      },
+      {
+        "name": "<ctgmath>",
+        "originalName": "<tgmath.h>",
+        "description": "Type-generic math (header)",
+        "category": "Numeric"
+      },
+      {
+        "name": "<ctime>",
+        "originalName": "<time.h>",
+        "description": "C Time Library (header)",
+        "category": "Time"
+      },
+      {
+        "name": "<cuchar>",
+        "originalName": "<uchar.h>",
+        "description": "Unicode characters (header)",
+        "category": "Character Handling"
+      },
+      {
+        "name": "<cwchar>",
+        "originalName": "<wchar.h>",
+        "description": "Wide characters (header)",
+        "category": "Character Handling"
+      },
+      {
+        "name": "<cwctype>",
+        "originalName": "<wctype.h>",
+        "description": "Wide character type (header)",
+        "category": "Character Handling"
+      }
+    ]
+  }

@@ -1,0 +1,64 @@
+{
+  "headers": [
+    {
+      "name": "<array>",
+      "originalName": "array",
+      "description": "Array header"
+    },
+    {
+      "name": "<bitset>",
+      "originalName": "bitset",
+      "description": "Bitset header"
+    },
+    {
+      "name": "<deque>",
+      "originalName": "deque",
+      "description": "Deque header"
+    },
+    {
+      "name": "<forward_list>",
+      "originalName": "forward_list",
+      "description": "Forward list header"
+    },
+    {
+      "name": "<list>",
+      "originalName": "list",
+      "description": "List header"
+    },
+    {
+      "name": "<map>",
+      "originalName": "map",
+      "description": "Map header"
+    },
+    {
+      "name": "<queue>",
+      "originalName": "queue",
+      "description": "Queue header"
+    },
+    {
+      "name": "<set>",
+      "originalName": "set",
+      "description": "Set header"
+    },
+    {
+      "name": "<stack>",
+      "originalName": "stack",
+      "description": "Stack header"
+    },
+    {
+      "name": "<unordered_map>",
+      "originalName": "unordered_map",
+      "description": "Unordered map header"
+    },
+    {
+      "name": "<unordered_set>",
+      "originalName": "unordered_set",
+      "description": "Unordered set header"
+    },
+    {
+      "name": "<vector>",
+      "originalName": "vector",
+      "description": "Vector header"
+    }
+  ]
+}

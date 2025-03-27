@@ -1,0 +1,180 @@
+{
+    "headers": [
+        {
+            "name": "<array>",
+            "originalName": "array",
+            "description": "Fixed-size array container",
+            "key_features": [
+                "Static, size-fixed container",
+                "Contiguous memory storage",
+                "Direct element access with compile-time size"
+            ],
+            "complexity": {
+                "access": "O(1)",
+                "insertion": "N/A",
+                "deletion": "N/A"
+            }
+        },
+        {
+            "name": "<bitset>",
+            "originalName": "bitset",
+            "description": "Fixed-size bit array container",
+            "key_features": [
+                "Efficient bit manipulation",
+                "Boolean operations support",
+                "Compile-time or runtime size specification"
+            ],
+            "complexity": {
+                "bit_operations": "O(1)"
+            }
+        },
+        {
+            "name": "<deque>",
+            "originalName": "deque",
+            "description": "Double-ended queue container",
+            "key_features": [
+                "Dynamic size",
+                "Efficient insertion/deletion at both ends",
+                "Random access capability"
+            ],
+            "complexity": {
+                "access": "O(1)",
+                "insertion_front": "Amortized O(1)",
+                "insertion_back": "Amortized O(1)"
+            }
+        },
+        {
+            "name": "<forward_list>",
+            "originalName": "forward_list",
+            "description": "Singly-linked list container",
+            "key_features": [
+                "Memory-efficient single-direction list",
+                "No size overhead",
+                "Constant-time insertion/deletion"
+            ],
+            "complexity": {
+                "access": "O(n)",
+                "insertion": "O(1)",
+                "deletion": "O(1)"
+            }
+        },
+        {
+            "name": "<list>",
+            "originalName": "list",
+            "description": "Doubly-linked list container",
+            "key_features": [
+                "Bidirectional traversal",
+                "Efficient insertion/deletion anywhere",
+                "No random access"
+            ],
+            "complexity": {
+                "access": "O(n)",
+                "insertion": "O(1)",
+                "deletion": "O(1)"
+            }
+        },
+        {
+            "name": "<map>",
+            "originalName": "map",
+            "description": "Ordered associative container",
+            "key_features": [
+                "Key-value storage",
+                "Sorted by keys",
+                "Balanced binary tree implementation"
+            ],
+            "complexity": {
+                "access": "O(log n)",
+                "insertion": "O(log n)",
+                "deletion": "O(log n)"
+            }
+        },
+        {
+            "name": "<queue>",
+            "originalName": "queue",
+            "description": "FIFO (First-In-First-Out) container adapter",
+            "key_features": [
+                "Restricted access container",
+                "Push to back, pop from front",
+                "Supports standard queue operations"
+            ],
+            "complexity": {
+                "push": "O(1)",
+                "pop": "O(1)"
+            }
+        },
+        {
+            "name": "<set>",
+            "originalName": "set",
+            "description": "Ordered unique key container",
+            "key_features": [
+                "Unique elements",
+                "Sorted order",
+                "No duplicate keys allowed"
+            ],
+            "complexity": {
+                "insertion": "O(log n)",
+                "deletion": "O(log n)",
+                "search": "O(log n)"
+            }
+        },
+        {
+            "name": "<stack>",
+            "originalName": "stack",
+            "description": "LIFO (Last-In-First-Out) container adapter",
+            "key_features": [
+                "Restricted access container",
+                "Push and pop from top",
+                "Last-in-first-out behavior"
+            ],
+            "complexity": {
+                "push": "O(1)",
+                "pop": "O(1)"
+            }
+        },
+        {
+            "name": "<unordered_map>",
+            "originalName": "unordered_map",
+            "description": "Hash table-based associative container",
+            "key_features": [
+                "Key-value storage",
+                "Constant-time average complexity",
+                "No guaranteed order"
+            ],
+            "complexity": {
+                "access": "O(1) average",
+                "insertion": "O(1) average",
+                "deletion": "O(1) average"
+            }
+        },
+        {
+            "name": "<unordered_set>",
+            "originalName": "unordered_set",
+            "description": "Hash table-based unique key container",
+            "key_features": [
+                "Unique elements",
+                "Hash-based storage",
+                "No particular order"
+            ],
+            "complexity": {
+                "insertion": "O(1) average",
+                "deletion": "O(1) average",
+                "search": "O(1) average"
+            }
+        },
+        {
+            "name": "<vector>",
+            "originalName": "vector",
+            "description": "Dynamic array container",
+            "key_features": [
+                "Dynamic size",
+                "Contiguous memory",
+                "Efficient random access"
+            ],
+            "complexity": {
+                "access": "O(1)",
+                "insertion_back": "Amortized O(1)",
+                "insertion_middle": "O(n)"
+            }
+        }
+    ]
+}
