@@ -21,7 +21,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon: Icon, label, isActive, 
     className={`
       flex items-center w-full p-3 text-left transition duration-200 
       ${isActive
-        ? 'bg-blue-500 text-white'
+        ? 'bg-cyan-500/50 text-white'
         : 'hover:bg-zinc-700 text-zinc-300 hover:text-white'}
     `}
   >
