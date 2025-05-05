@@ -62,7 +62,7 @@ yarn dev
 
 The newly added **Problems** page provides users with:
 
-- Curated programming challenges from platforms like LeetCode, CodeForces, and HackerRank
+- Curated programming challenges from platforms like LeetCode, CodeForces, GeeksforGeeks and CSES
 - Problems organized by difficulty level and category
 - Clear problem descriptions
 - Links to the original problem sources
