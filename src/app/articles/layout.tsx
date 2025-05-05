@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import Navbar from "../../components/Navbar"; // Adjusted the path to the Navbar component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
           {children}
-          <div className="w-full relative flex items-center justify-center">
-          </div>
+          <div className="w-full relative flex items-center justify-center"></div>
         </ThemeProvider>
       </body>
     </html>

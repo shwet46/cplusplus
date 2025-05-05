@@ -64,7 +64,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="md:hidden ml-auto flex items-center">
           <Link 
             href="/login" 
-            className="p-2 mr-4 text-pink-300"
+            className="p-2 mr-4 text-blue-300 hover:text-blue-400 transition-colors"
             aria-label="User Account"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -118,6 +118,7 @@ function Navbar({ className }: { className?: string }) {
               </button>
             </form>
           </div>
+          {/* Login link with blue/indigo styling */}
           <Link 
             href="/login" 
             className="flex-shrink-0 px-4 py-2 rounded-2xl transition-colors duration-200 bg-blue-500 hover:bg-blue-600 text-white"
@@ -200,6 +201,16 @@ function Navbar({ className }: { className?: string }) {
                 className="text-white hover:bg-gray-700"
               />
             </Link>
+            {/* Added login button to mobile menu */}
+            <div className="px-4 py-3 border-t border-gray-700">
+              <Link 
+                href="/login"
+                onClick={closeMobileMenu}
+                className="block w-full py-2 px-4 text-center rounded-md bg-blue-500 hover:bg-blue-600 text-white transition-colors"
+              >
+                Login
+              </Link>
+            </div>
           </MobileMenu>
         )}
       </AnimatePresence>
