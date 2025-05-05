@@ -41,6 +41,7 @@ function Navbar({ className }: { className?: string }) {
 
   const navItems = [
     { name: "Home", path: "/" },
+    { name: "Problems", path: "/problems"},
     { name: "Tutorials", path: "/tutorials" },
     { name: "Articles", path: "/articles" },
     { name: "Forums", path: "/forums" },
@@ -146,7 +147,7 @@ function Navbar({ className }: { className?: string }) {
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
-                  placeholder="Search for STL, functions, tutorials..."
+                  placeholder="Search for STL..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-5 py-2 border font-normal rounded-xl focus:outline-none focus:ring-2 text-sm bg-zinc-800/80 border-zinc-700/50 text-gray-300 focus:ring-cyan-500/50 placeholder-gray-500"
