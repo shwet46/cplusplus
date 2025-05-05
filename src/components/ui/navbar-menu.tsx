@@ -115,6 +115,9 @@ export const MobileMenu = ({
   setActive: React.Dispatch<React.SetStateAction<string | null>>;
   active: string | null;
 }) => {
+  // Fix: Actually use the isOpen prop in a conditional render
+  if (!isOpen) return null;
+
   return (
     <motion.div 
       initial={{ opacity: 0, height: 0 }}
@@ -127,6 +130,10 @@ export const MobileMenu = ({
         opacity: 0, 
         height: 0,
         transition: { duration: 0.2, ease: "easeInOut" }
+      }}
+      onBlur={onClose}
+      onClick={() => {
+        if (active) setActive(null);
       }}
       className={cn(
         "overflow-hidden mobile-menu w-full bg-zinc-900 border-b border-zinc-800 shadow-2xl shadow-black/30",
